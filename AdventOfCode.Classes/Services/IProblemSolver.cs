@@ -1,11 +1,15 @@
 ﻿using System;
+using System.Collections;
+using System.Collections.Generic;
 
 namespace AdventOfCode.Classes
 {
-    public interface IProblemSolver
+    public interface IProblemSolver<T>
     {
+        IEnumerable<T> InputLines { get; set; }
+
         void ReadInputFile();
-        object SolvePartOne();
-        object SolvePartTwo();
+        void SolvePartOne();
+        void SolvePartTwo();
     }
 }
