@@ -16,36 +16,10 @@ namespace AdventOfCode.Day1
 
             OutputWelcomeMessage(DayNum);
 
-            OutputPartOne();
-            OutputPartTwo();
+            OutputPartOne(_problemSolver);
+            OutputPartTwo(_problemSolver);
 
             OutputGoodbyeMessage();
-        }
-
-        private static void OutputPartOne()
-        {
-            try
-            {
-                Console.WriteLine(String.Format(Constants.SolvingMessage, "Part 1"));
-                _problemSolver.SolvePartOne();
-            }
-            catch (Exception)
-            {
-                Console.WriteLine(String.Format(Constants.NoSolutionError, "Part 1"));
-            }
-        }
-
-        private static void OutputPartTwo()
-        {
-            try
-            {
-                Console.WriteLine(String.Format(Constants.SolvingMessage, "Part 2"));
-                _problemSolver.SolvePartTwo();
-            }
-            catch (Exception)
-            {
-                Console.WriteLine(String.Format(Constants.NoSolutionError, "Part 2"));
-            }
         }
     }
 }

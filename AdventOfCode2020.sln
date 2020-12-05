@@ -5,7 +5,14 @@ VisualStudioVersion = 16.0.30717.126
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AdventOfCode.Classes", "AdventOfCode.Classes\AdventOfCode.Classes.csproj", "{668DE90E-5759-40C2-9526-64762AAF335F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AdventOfCode.Day1", "AdventOfCode.Day1\AdventOfCode.Day1.csproj", "{10C9B1A0-86A4-4EBF-8D31-F17B916C8702}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AdventOfCode.Day1", "AdventOfCode.Day1\AdventOfCode.Day1.csproj", "{10C9B1A0-86A4-4EBF-8D31-F17B916C8702}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AdventOfCode.Day3", "AdventOfCode.Day3\AdventOfCode.Day3.csproj", "{95DAA3D5-FD86-4815-8454-64828C39B6FB}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{0598BC25-4ED3-4405-8BB2-59B68D7EEA06}"
+	ProjectSection(SolutionItems) = preProject
+		NewDayTemplate\AdventOfCode.Day.zip = NewDayTemplate\AdventOfCode.Day.zip
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +28,10 @@ Global
 		{10C9B1A0-86A4-4EBF-8D31-F17B916C8702}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{10C9B1A0-86A4-4EBF-8D31-F17B916C8702}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{10C9B1A0-86A4-4EBF-8D31-F17B916C8702}.Release|Any CPU.Build.0 = Release|Any CPU
+		{95DAA3D5-FD86-4815-8454-64828C39B6FB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{95DAA3D5-FD86-4815-8454-64828C39B6FB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{95DAA3D5-FD86-4815-8454-64828C39B6FB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{95DAA3D5-FD86-4815-8454-64828C39B6FB}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
