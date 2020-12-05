@@ -1,6 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace AdventOfCode.Classes.Services
 {
@@ -14,9 +12,9 @@ namespace AdventOfCode.Classes.Services
             {
                 return Convert.ToInt32(obj);
             }
-            catch (Exception e)
+            catch (Exception)
             {
-                return Int32.MinValue;
+                return int.MinValue;
             }
         }
 
