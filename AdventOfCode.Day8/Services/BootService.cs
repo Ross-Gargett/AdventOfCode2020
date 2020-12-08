@@ -58,19 +58,17 @@ namespace AdventOfCode.Day8.Services
             
             while (!programTerminates)
             {
-                var modifiedInstructions = DeepCopyOriginalInstructions();
-
                 var lastJumpIndex = negativeJumps.Pop();
 
-                modifiedInstructions[lastJumpIndex].SwapToNop();
+                _instructions[lastJumpIndex].SwapToNop();
 
-                if (DoesProgramTerminate(modifiedInstructions))
+                if (DoesProgramTerminate(_instructions))
                 {
                     programTerminates = true;
                 }
                 else
                 {
-                    modifiedInstructions[lastJumpIndex].Revert();
+                    _instructions[lastJumpIndex].Revert();
                 }
             }
 
@@ -133,11 +131,6 @@ namespace AdventOfCode.Day8.Services
             }
 
             return i;
-        }
-
-        private List<BootInstruction> DeepCopyOriginalInstructions()
-        {
-            return new List<BootInstruction>(_instructions.ToArray());
         }
 
         private void ParseBootCode(IEnumerable<string> instructions)

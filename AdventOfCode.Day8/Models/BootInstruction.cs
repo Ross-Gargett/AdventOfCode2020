@@ -6,18 +6,7 @@ namespace AdventOfCode.Day8.Models
     {
         public OperationType Operation { get; set; }
         public int Argument { get; set; }
-
-        internal int Execute(int i)
-        {
-            return Operation switch
-            {
-                OperationType.Nop => i,
-                OperationType.Acc => throw new NotImplementedException(),
-                OperationType.Jmp => throw new NotImplementedException(),
-                _ => i
-            };
-        }
-
+        
         internal void SwapToNop()
         {
             Operation = OperationType.Nop;
