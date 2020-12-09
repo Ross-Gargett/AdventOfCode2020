@@ -18,6 +18,18 @@ namespace AdventOfCode.Classes.Services
             }
         }
 
+        public static Int64 ToBigInt(this object obj)
+        {
+            try
+            {
+                return Convert.ToInt64(obj);
+            }
+            catch (Exception)
+            {
+                return int.MinValue;
+            }
+        }
+
         #endregion
     }
 }
