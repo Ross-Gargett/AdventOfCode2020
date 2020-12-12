@@ -27,5 +27,35 @@ namespace AdventOfCode.Day12.Models
                     throw new ArgumentOutOfRangeException(nameof(direction), direction, null);
             }
         }
+
+        internal void RotateRelativeRight(int value)
+        {
+            for (int i = 0; i < value / 90; i++)
+            {
+                int oldLongitude = Longitude,
+                    oldLatitude = Latitude;
+
+                Latitude = oldLongitude;
+                Longitude = -oldLatitude;
+            }
+        }
+
+        internal void RotateRelativeLeft(int value)
+        {
+            for (int i = 0; i < value / 90; i++)
+            {
+                int oldLongitude = Longitude,
+                    oldLatitude = Latitude;
+
+                Latitude = -oldLongitude;
+                Longitude = oldLatitude;
+            }
+        }
+
+        internal void AdjustPosition(Position waypointPosition, int value)
+        {
+            Longitude += waypointPosition.Longitude * value;
+            Latitude += waypointPosition.Latitude * value;
+        }
     }
 }

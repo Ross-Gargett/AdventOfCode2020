@@ -36,6 +36,18 @@ namespace AdventOfCode.Day12.Services
         public void SolvePartTwo()
         {
             ReadInputFile();
+
+            var navigator = new WaypointNavigator();
+
+            foreach (var instruction in InputLines)
+            {
+                navigator.FollowInstruction(instruction);
+            }
+
+            var manhattanDistance = navigator.GetManhattanDistance();
+
+            Console.WriteLine(string.Format(Day12Constants.Day12PartTwoAnswer,
+                manhattanDistance.AbsoluteLatitude, manhattanDistance.AbsoluteLongitude, manhattanDistance.GetSumPosition()));
         }
 
         private IEnumerable<Instruction> ParseInstructions(string[] instrStr)
